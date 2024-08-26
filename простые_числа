@@ -1,0 +1,21 @@
+Формат ввода
+Вводится одно натуральное число.
+
+Формат вывода
+Требуется вывести сообщение YES если число простое, иначе — NO.
+
+
+
+number = int(input())
+is_prime = False
+if number <= 1:
+    print('NO')
+else:
+    is_prime = True
+for i in range(2, (int(number ** 0.5) + 1)):
+    if (number % i == 0):
+        is_prime = False
+        print('NO')
+        break
+if is_prime is True:
+    print('YES')
