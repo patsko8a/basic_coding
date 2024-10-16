@@ -1,0 +1,28 @@
+def binary_search(nums, target):
+  left = 0
+  right = len(nums) - 1
+
+  while left <= right:
+    middle = (left + right) // 2
+    current_number = nums[middle]
+
+    if current_number == target:
+      return middle
+    
+    if current_number < target:
+      left = middle + 1
+    
+    if current_number > target:
+      right = middle - 1
+
+  return -1
+
+
+
+  важно: список должен быть отсортирован.
+  пример для проверки кода: 
+
+  nums = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+  target = 7
+
+  binary_search(nums, target)
